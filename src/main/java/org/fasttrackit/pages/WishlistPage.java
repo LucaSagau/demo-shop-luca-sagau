@@ -17,4 +17,7 @@ public class WishlistPage {
     }
 
 
+    public boolean validateWishlistIsNotDisplayed() {
+        return !this.pageWishlistSubtitle.exists();
+    }
 }
