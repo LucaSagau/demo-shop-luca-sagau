@@ -22,7 +22,7 @@ public class HomePage extends Page {
     private final SelenideElement sortField = $(".sort-products-select");
     private final SelenideElement searchField = $("#input-search");
     private final SelenideElement searchButton = $(".btn.btn-light.btn-sm");
-
+    private final SelenideElement productTitle = $("small.text-muted");
     public HomePage() {
         System.out.println("Constructing Header.");
         this.header = new Header();
@@ -50,6 +50,10 @@ public class HomePage extends Page {
 
     public String getPageTitle() {
         return title;
+    }
+
+    public SelenideElement getProductTitle() {
+        return productTitle;
     }
 
     /**
@@ -178,5 +182,7 @@ public class HomePage extends Page {
     }
 
 
-
+    public boolean validateProductTitleIsDisplayed() {
+        return  this.productTitle.exists() && this.productTitle.isDisplayed();
+    }
 }
