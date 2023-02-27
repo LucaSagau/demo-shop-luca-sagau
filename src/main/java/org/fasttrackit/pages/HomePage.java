@@ -8,7 +8,7 @@ import org.fasttrackit.body.Header;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class HomePage extends Page{
+public class HomePage extends Page {
 
     private final String title = Selenide.title();
 
@@ -89,7 +89,9 @@ public class HomePage extends Page{
     public void validateThatFooterContainsResetIcon() {
         System.out.println("Verify that reset icon is : " + footer.getResetIcon());
     }
-
+    /**
+     * Validators-displayed
+     */
 
     public boolean validateModalIsDisplayed() {
         System.out.println("Verify that the modal is displayed on page. ");
@@ -120,13 +122,20 @@ public class HomePage extends Page{
         System.out.println("Verify that search button is displayed.");
         return this.searchButton.exists() && this.searchButton.isDisplayed();
     }
-
+    /**
+     * Validators-enabled
+     */
     public boolean validateSearchButtonIsEnabled() {
         System.out.println("Verify that search button is enabled. ");
         return this.searchButton.isEnabled();
     }
 
-
+    public boolean validateSearchFieldIsEnabled() {
+        return this.searchField.isEnabled();
+    }
+    public boolean validateSortFieldIsEnabled() {
+        return  this.sortField.isEnabled();
+    }
     /**
      * Clicks
      */
@@ -167,6 +176,7 @@ public class HomePage extends Page{
     public void resetPage() {
         this.footer.clickOnResetIcon();
     }
+
 
 
 }

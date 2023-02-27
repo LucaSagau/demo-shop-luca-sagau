@@ -16,7 +16,9 @@ public class SortDropDownMenu {
     public void clickOnTheSortField() {
         this.sortField.click();
     }
-
+    /**
+     * Validators-displayed
+     */
     public boolean validateSortAToZIsDisplayedByDefault() {
         System.out.println("Verify that Sort by name (A to Z) is displayed.");
         this.sortAToZ.shouldBe( Condition.appear);
@@ -39,5 +41,22 @@ public class SortDropDownMenu {
         return this.sortHighToLow.exists() && this.sortHighToLow.isDisplayed();
     }
 
+    /**
+     * Validators-enabled
+     */
+    public boolean validateSortAToZIsEnabled() {
+        return this.sortAToZ.isEnabled();
+    }
 
+    public boolean validateSortZToAIsEnabled() {
+        return this.sortZToA.isEnabled();
+    }
+
+    public boolean validateSortByPriceLowToHighIsEnabled() {
+        return  this.sortLowToHigh.isEnabled();
+    }
+
+    public boolean validateSortByPriceHighToLowIsEnabled() {
+        return  this.sortHighToLow.isEnabled();
+    }
 }
