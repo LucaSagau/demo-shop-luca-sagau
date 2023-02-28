@@ -1,4 +1,4 @@
-package org.fasttrackit;
+package org.fasttrackit.components;
 
 import org.fasttrackit.dataprovider.ProductDataProvider;
 import org.fasttrackit.pages.HomePage;
@@ -18,7 +18,7 @@ public class ProductComponentsTest {
     }
 
     @Test
-    public void validateProductTitleIsDisplayed() {
+    public void ProductTitleIsDisplayed() {
 
         assertTrue(homePage.validateProductTitleIsDisplayed(),"Expected title to be displayed.");
     }

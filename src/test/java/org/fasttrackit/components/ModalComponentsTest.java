@@ -1,4 +1,4 @@
-package org.fasttrackit;
+package org.fasttrackit.components;
 
 import io.qameta.allure.Feature;
 import org.fasttrackit.body.Modal;

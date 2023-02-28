@@ -11,6 +11,9 @@ public class CartPage {
     private final SelenideElement continueShoppingButton = $(".btn-danger");
     private final SelenideElement checkoutButton = $(".btn-success");
 
+    /**
+     * Validators-displayed
+     */
     public boolean validateCartIsDisplayed() {
         System.out.println("Verify cart is displayed. ");
         return this.pageCartSubtitle.exists() && this.pageCartSubtitle.isDisplayed();
@@ -24,9 +27,11 @@ public class CartPage {
     public boolean validateContinueShoppingButtonIsDisplayed() {
         return this.continueShoppingButton.exists() && this.continueShoppingButton.isDisplayed();
     }
+
     public boolean validateCheckoutButtonIsDisplayed() {
-        return  this.checkoutButton.exists() && this.checkoutButton.isDisplayed();
+        return this.checkoutButton.exists() && this.checkoutButton.isDisplayed();
     }
+
     /**
      * Validators-enabled
      */
@@ -39,4 +44,7 @@ public class CartPage {
         return this.checkoutButton.isEnabled();
     }
 
+    public void clickOnCheckoutButton() {
+        this.checkoutButton.click();
+    }
 }

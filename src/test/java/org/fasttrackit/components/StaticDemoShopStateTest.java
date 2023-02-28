@@ -1,4 +1,4 @@
-package org.fasttrackit;
+package org.fasttrackit.components;
 
 import com.codeborne.selenide.SelenideElement;
 import org.fasttrackit.pages.HomePage;
