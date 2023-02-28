@@ -3,6 +3,7 @@ package org.fasttrackit.body;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class Header {
 
@@ -48,31 +49,30 @@ public class Header {
      */
 
     public void clickOnTheSignInButton() {
+
         this.signInButton.click();
     }
 
-
     public void clickOnTheWishlistIcon() {
-        System.out.println("Clicked on the wishlist icon. ");
+
         this.wishListIcon.click();
     }
 
     public void clickOnTheLogoButton() {
         this.logoIcon.scrollTo();
         this.logoIcon.click();
+        sleep(150);
     }
 
     public void clickOnTheCartIcon() {
-        System.out.println("Clicked on the cart icon. ");
+
         this.cartIcon.click();
     }
 
     public void clickOnTheSignOutButton() {
+
         this.signOutButton.click();
     }
-
-
-
 
 
 }

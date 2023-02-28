@@ -44,22 +44,24 @@ public class Modal {
      */
 
     public void clickOnTheCloseButton() {
-        System.out.println("Clicked on the " + closeButton + " button.");
+
         this.closeButton.click();
         sleep(250);
     }
 
     public void clickOnUserNameField() {
-        System.out.println("Clicked on the : " + this.username);
+
         this.username.click();
     }
 
     public void clickOnPasswordField() {
-        System.out.println(" Clicked on the : " + this.password);
+        this.password.click();
+
+
     }
 
     public void clickOnTheLoginButton() {
-        System.out.println("Clicked on the : " + this.loginButton);
+
         this.loginButton.click();
         sleep(200);
     }
@@ -69,13 +71,13 @@ public class Modal {
      */
 
     public void typeInUserNameField(String userToType) {
-        System.out.println("Typed in username : " + userToType);
+
         this.username.click();
         this.username.sendKeys(userToType);
     }
 
     public void typeInPasswordField(String passwordToType) {
-        System.out.println("Typed in password : " + passwordToType);
+
         this.password.click();
         this.password.sendKeys(passwordToType);
     }

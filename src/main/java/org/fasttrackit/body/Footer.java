@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class Footer {
 
 
-    private final SelenideElement details = $(".nav-link");//"Demo Shop | build date 2021-05-21 14:04:30 GTBDT"
+    private final SelenideElement details = $(".nav-link");
     private final SelenideElement questionIcon = $("[data-icon=question]");
     private final SelenideElement resetIcon = $("[data-icon=undo]");
     public Footer() {
