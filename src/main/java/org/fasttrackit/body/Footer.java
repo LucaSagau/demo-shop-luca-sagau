@@ -3,6 +3,7 @@ package org.fasttrackit.body;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class Footer {
 
@@ -29,6 +30,7 @@ public class Footer {
 
     public void clickOnResetIcon() {
         this.resetIcon.click();
+        sleep(200);
     }
 
 }

@@ -3,6 +3,7 @@ package org.fasttrackit.pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class CheckoutPage {
 
@@ -73,5 +74,32 @@ public class CheckoutPage {
 
     public void clickOnContinueCheckoutButton() {
         this.continueCheckoutButton.click();
+        sleep(200);
+    }
+
+    public void clickOnFirstNameField() {
+        this.firstNameField.click();
+    }
+    public void clickOnLastNameField() {
+        this.lastNameField.click();
+    }
+    public void clickOnAddressField() {
+        this.addressField.click();
+    }
+    /**
+     *Types
+     */
+    public void typeOnFirstNameField(String firstName) {
+        this.firstNameField.sendKeys(firstName);
+    }
+
+
+    public void typeOnLastNameField(String lastName) {
+        this.lastNameField.sendKeys(lastName);
+    }
+
+
+    public void typeOnAddressField(String address) {
+        this.addressField.sendKeys(address);
     }
 }

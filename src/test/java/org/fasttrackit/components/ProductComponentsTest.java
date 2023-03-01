@@ -4,6 +4,7 @@ import org.fasttrackit.dataprovider.ProductDataProvider;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
@@ -12,7 +13,7 @@ public class ProductComponentsTest {
 
     HomePage homePage = new HomePage();
 
-    @AfterClass
+    @AfterTest
     public void setup() {
         homePage.returnToHomePage();
     }

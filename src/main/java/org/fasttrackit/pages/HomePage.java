@@ -155,7 +155,7 @@ public class HomePage extends Page {
 
     public void clickOnTheLogoButton() {
         this.header.clickOnTheLogoButton();
-        sleep(150);
+        sleep(350);
     }
 
     public void clickOnTheCartIcon() {
