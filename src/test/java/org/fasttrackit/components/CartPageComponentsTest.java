@@ -34,6 +34,7 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateCartAddingMsgIsDisplayed(), "Expected cart adding message to be displayed.");
+        homePage.resetPage();
         homePage.clickOnTheLogoButton();
     }
     @Test(testName = "Verify the continue shopping button is displayed on cart page.",
