@@ -1,14 +1,13 @@
 package org.fasttrackit.components;
 
-import io.qameta.allure.Feature;
+
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertTrue;
-@Feature("Cart Components Tests")
+
 public class CartPageComponentsTest {
 
     HomePage homePage = new HomePage();
@@ -40,7 +39,6 @@ public class CartPageComponentsTest {
     @Test(testName = "Verify the continue shopping button is displayed on cart page.",
             description = "This test verify the continue shopping button is displayed on cart page.")
     public void continueShoppingButtonIsDisplayed() {
-
         Product product1 = new Product("1");
         product1.addToBasket();
         homePage.clickOnTheCartIcon();
@@ -55,7 +53,6 @@ public class CartPageComponentsTest {
     public void continueShoppingButtonIsEnabled() {
         Product product1 = new Product("1");
         product1.addToBasket();
-
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateContinueShoppingButtonIsEnabled(), "Expected continue shopping button to be enabled on cart page.");

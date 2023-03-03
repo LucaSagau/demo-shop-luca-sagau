@@ -5,7 +5,7 @@ import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
 import org.fasttrackit.products.ProductsInCart;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
@@ -22,7 +22,9 @@ public class ProductsInCartComponentsTest {
 
 
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName ="Verify minus button is displayed for al products in cart page." ,
+            description = "This test add all 10 products in cart and verify if minus button is displayed for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyMinusButtonIsDisplayedForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
