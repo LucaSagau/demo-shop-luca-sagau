@@ -13,7 +13,7 @@ public class ProductsInCart {
     private final SelenideElement trashButton;
     private final SelenideElement priceSeveralProducts;
     private final SelenideElement priceOneProduct;
-
+    private final SelenideElement cartIcon = $("[href='#/cart']");
     public ProductsInCart(String productIdCart) {
         this.productLinkCart = $(String.format("#item_%s_title_link", productIdCart));
         this.container = productLinkCart.parent().parent();
@@ -88,16 +88,13 @@ public class ProductsInCart {
     }
 
 
+    public String verifyNumberOfProductsInBasket() {
+        SelenideElement basketCounter = cartIcon.$(".fa-layers-counter");
+        if (basketCounter.exists())
+            return basketCounter.getText();
+        return "";
 
-
-
-
-
-
-
-
-
-
+    }
 
 
 }
