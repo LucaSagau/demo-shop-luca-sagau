@@ -12,6 +12,7 @@ import static org.testng.Assert.assertTrue;
 public class WishlistPageComponentsTest {
 
     HomePage homePage = new HomePage ();
+
     @AfterMethod
     public void setup() {
         homePage.returnToHomePage();

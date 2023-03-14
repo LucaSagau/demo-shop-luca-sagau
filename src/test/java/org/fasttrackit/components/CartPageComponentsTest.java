@@ -1,11 +1,11 @@
 package org.fasttrackit.components;
 
-
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertTrue;
 
 public class CartPageComponentsTest {
@@ -36,6 +36,7 @@ public class CartPageComponentsTest {
         homePage.resetPage();
         homePage.clickOnTheLogoButton();
     }
+
     @Test(testName = "Verify the continue shopping button is displayed on cart page.",
             description = "This test verify the continue shopping button is displayed on cart page.")
     public void continueShoppingButtonIsDisplayed() {
@@ -70,7 +71,6 @@ public class CartPageComponentsTest {
         assertTrue(cartPage.validateCheckoutButtonIsDisplayed(), "Expected checkout button to be displayed on cart page.");
         homePage.resetPage();
         homePage.clickOnTheLogoButton();
-
     }
 
     @Test(testName = "Verify the checkout button is enabled on cart page.",
@@ -83,5 +83,42 @@ public class CartPageComponentsTest {
         assertTrue(cartPage.validateCheckoutButtonIsEnabled(), "Expected checkout button to be enabled on cart page.");
         homePage.resetPage();
         homePage.clickOnTheLogoButton();
+    }
+
+    @Test(testName = "Verify the items total is displayed on cart page.",
+            description = "This test verify the items total is displayed on cart page.")
+    public void itemsTotalIsDisplayed() {
+        Product product1 = new Product("1");
+        product1.addToBasket();
+        homePage.clickOnTheCartIcon();
+        CartPage cartPage = new CartPage();
+        assertTrue(cartPage.validateItemsTotalIsDisplayed(), "Expected items total to be displayed on cart page.");
+        homePage.resetPage();
+        homePage.clickOnTheLogoButton();
+    }
+
+    @Test(testName = "Verify the tax is displayed on cart page.",
+            description = "This test verify the tax is displayed on cart page.")
+    public void taxIsDisplayed() {
+        Product product1 = new Product("1");
+        product1.addToBasket();
+        homePage.clickOnTheCartIcon();
+        CartPage cartPage = new CartPage();
+        assertTrue(cartPage.validateTaxIsDisplayed(), "Expected tax to be displayed on cart page.");
+        homePage.resetPage();
+        homePage.clickOnTheLogoButton();
+    }
+
+    @Test(testName = "Verify the total is displayed on cart page.",
+            description = "This test verify the total is displayed on cart page.")
+    public void totalIsDisplayed() {
+        Product product1 = new Product("1");
+        product1.addToBasket();
+        homePage.clickOnTheCartIcon();
+        CartPage cartPage = new CartPage();
+        assertTrue(cartPage.validateTotalIsDisplayed(), "Expected total to be displayed on cart page.");
+        homePage.resetPage();
+        homePage.clickOnTheLogoButton();
+
     }
 }
