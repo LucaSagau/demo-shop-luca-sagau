@@ -13,6 +13,15 @@ public class CartPage {
     private final SelenideElement itemsTotal = $(" tr:nth-child(1) > td.amount:nth-child(2)");
     private final SelenideElement tax = $(" tr:nth-child(2) > td.amount:nth-child(2)");
     private final SelenideElement total = $(".amount-total");
+    private final SelenideElement cartIcon = $("[href='#/cart']");
+
+    public String verifyNumberOfProductsInBasket() {
+        SelenideElement basketCounter = cartIcon.$(".fa-layers-counter");
+        if (basketCounter.exists())
+            return basketCounter.getText();
+        return "";
+    }
+
 
     /**
      * Validators-displayed

@@ -9,7 +9,12 @@ public class WishlistPage {
     private final SelenideElement pageWishlistSubtitle = $(".text-muted");
     private final SelenideElement wishlistIcon = $("[href='#/wishlist']");
 
-
+    public String verifyNumberOfProductsInWishlist() {
+        SelenideElement wishlistCounter = wishlistIcon.$(".fa-layers-counter");
+        if (wishlistCounter.exists())
+            return wishlistCounter.getText();
+        return "";
+    }
 
     public boolean validateWishlistIsDisplayed() {
         System.out.println("Verify wishlist is displayed. ");
