@@ -30,6 +30,7 @@ public class LogInFromCartPageWithValidUserTest {
         Header header = new Header(account.getUsername());
         assertEquals(header.getGreetingsMessage(), account.getGreetingsMsg(), "Expected message to be Hi " + account.getUsername() + "!");
         homePage.logUserOut();
+        homePage.resetPage();
     }
 
     @Test
@@ -47,6 +48,7 @@ public class LogInFromCartPageWithValidUserTest {
         Header header = new Header(account.getUsername());
         assertEquals(header.getGreetingsMessage(), account.getGreetingsMsg(), "Expected message to be Hi " + account.getUsername() + "!");
         homePage.logUserOut();
+        homePage.resetPage();
     }
 
     @Test
@@ -64,6 +66,7 @@ public class LogInFromCartPageWithValidUserTest {
         Header header = new Header(account.getUsername());
         assertEquals(header.getGreetingsMessage(), account.getGreetingsMsg(), "Expected message to be Hi " + account.getUsername() + "!");
         homePage.logUserOut();
+        homePage.resetPage();
     }
 
 }

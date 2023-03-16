@@ -8,10 +8,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class DecreaseNumberOfProductsInCartTest {
-
     HomePage homePage = new HomePage();
-
-
     @Test
     public void verifyIfClickingOnMinusButtonForProduct0IsDecreasingNumberOfProductsInCart() {
         Product product0 = new Product("0");
