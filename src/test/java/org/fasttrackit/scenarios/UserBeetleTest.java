@@ -49,7 +49,7 @@ public class UserBeetleTest {
         product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
-        assertEquals("1", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 1.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(),"1", "Expected number of products in cart to be 1.");
     }
 
     @Test(testName = "Verify user beetle can add product two in cart.",
@@ -81,7 +81,7 @@ public class UserBeetleTest {
         product3.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
-        assertEquals("1", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 1.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(),"1", "Expected number of products in cart to be 1.");
     }
 
     @Test(testName = "Verify user beetle can add product four in cart.",
@@ -97,7 +97,7 @@ public class UserBeetleTest {
         product4.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
-        assertEquals("1", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 1.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(),"1", "Expected number of products in cart to be 1.");
     }
 
     @Test(testName = "Verify user beetle can add product Five in cart.",
@@ -113,7 +113,7 @@ public class UserBeetleTest {
         product5.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
-        assertEquals("1", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 1.");
+        assertEquals( cartPage.verifyNumberOfProductsInBasket(),"1", "Expected number of products in cart to be 1.");
     }
 
     @Test(testName = "Verify user beetle can add product six in cart.",
@@ -145,7 +145,7 @@ public class UserBeetleTest {
         product7.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
-        assertEquals("1", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 1.");
+        assertEquals( cartPage.verifyNumberOfProductsInBasket(),"1", "Expected number of products in cart to be 1.");
     }
 
     @Test(testName = "Verify user beetle can add product eight in cart.",
@@ -177,7 +177,7 @@ public class UserBeetleTest {
         product9.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
-        assertEquals("1", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 1.");
+        assertEquals( cartPage.verifyNumberOfProductsInBasket(),"1", "Expected number of products in cart to be 1.");
     }
 
 }

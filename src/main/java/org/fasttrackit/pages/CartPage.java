@@ -22,6 +22,9 @@ public class CartPage {
         return "";
     }
 
+    public String getItemsTotal() {
+        return this.itemsTotal.text();
+    }
 
     /**
      * Validators-displayed
