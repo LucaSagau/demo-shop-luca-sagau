@@ -3,15 +3,16 @@ package org.fasttrackit.pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class SummaryPage {
 
     private final SelenideElement summaryTitle = $(".text-muted");
     private final SelenideElement cancelButtonSummary = $("a.btn.btn-danger:nth-child(1)");
-    private final SelenideElement completeYourOrderButton = $(".btn-success");
+    private final SelenideElement completeYourOrderButton = $(".fa-angle-right");
     private final SelenideElement thankYouMessage = $(".text-center");
     private final SelenideElement orderCompleteTitle = $(".text-muted");
-    private final SelenideElement continueShoppingSummaryButton = $("[href='#/products']");
+    private final SelenideElement continueShoppingSummaryButton = $("a.btn.btn-success");
 
     /**
      * Validators-displayed
@@ -57,7 +58,9 @@ public class SummaryPage {
      * Clicks
      */
     public void clickOnCompleteYourOrderButton() {
+        this.completeYourOrderButton.scrollTo();
         this.completeYourOrderButton.click();
+        sleep(200);
     }
 
     public void clickOnContinueShoppingSummaryButton() {

@@ -23,7 +23,6 @@ public class SortDropDownMenuTest {
             description = "This test verify if sort field is displayed.")
     public void verifySortFieldIsDisplayed() {
         assertTrue(homePage.validateSortFieldIsDisplayed(), "Expected sort field to be displayed.");
-
     }
 
     @Test(testName = "Verify the sort field is enabled.",

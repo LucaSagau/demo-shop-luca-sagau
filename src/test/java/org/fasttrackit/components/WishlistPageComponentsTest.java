@@ -8,13 +8,14 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.sleep;
 import static org.testng.Assert.assertTrue;
-@Feature("Wishlist Page Components Tests")
+
 public class WishlistPageComponentsTest {
 
     HomePage homePage = new HomePage ();
 
     @AfterMethod
     public void setup() {
+
         homePage.returnToHomePage();
     }
     @Test(testName = "Verify the wishlist page can be open from home page.",
@@ -25,19 +26,16 @@ public class WishlistPageComponentsTest {
         WishlistPage wishlistPage = new WishlistPage ();
         assertTrue ( wishlistPage.validateWishlistIsDisplayed () , "Expected wishlist page to be displayed." );
         homePage.clickOnTheLogoButton ();
-
-
-
     }
 
     @Test(testName = "Verify the wishlist page is not displayed.",
             description = "Verify the wishlist page is not displayed.")
-
     public void wishlistPageIsClose() {
         homePage.clickOnTheWishlistIcon ();
         WishlistPage wishlistPage = new WishlistPage ();
+        assertTrue ( wishlistPage.validateWishlistIsDisplayed () , "Expected wishlist page to be displayed." );
         homePage.clickOnTheLogoButton ();
-        assertTrue ( wishlistPage.validateWishlistIsNotDisplayed () , "Expected wishlist page to be not displayed." );
+        assertTrue (homePage.validateProductTitleIsDisplayed(),"Expected wishlist page to be close");
     }
 
 }

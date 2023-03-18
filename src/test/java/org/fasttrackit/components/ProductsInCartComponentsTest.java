@@ -4,9 +4,7 @@ import org.fasttrackit.dataprovider.ProductsInCartDataProvider;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
 import org.fasttrackit.products.ProductsInCart;
-import org.testng.annotations.AfterClass;
-
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import static org.testng.Assert.assertTrue;
 
@@ -14,15 +12,14 @@ public class ProductsInCartComponentsTest {
 
     HomePage homePage = new HomePage();
 
-    @AfterClass
+
+    @AfterTest
     public void setup() {
         homePage.resetPage();
         homePage.returnToHomePage();
     }
 
-
-
-    @Test(testName ="Verify minus button is displayed for al products in cart page." ,
+    @Test(testName = "Verify minus button is displayed for al products in cart page.",
             description = "This test add all 10 products in cart and verify if minus button is displayed for all products.",
             dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyMinusButtonIsDisplayedForAllProducts(ProductsInCart productsInCart) {
@@ -52,7 +49,9 @@ public class ProductsInCartComponentsTest {
         homePage.returnToHomePage();
     }
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName = "Verify minus button is enabled for al products in cart page.",
+            description = "This test add all 10 products in cart and verify if minus button is enabled for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyMinusButtonIsEnabledForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
@@ -80,7 +79,9 @@ public class ProductsInCartComponentsTest {
         homePage.returnToHomePage();
     }
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName = "Verify plus button is displayed for al products in cart page.",
+            description = "This test add all 10 products in cart and verify if plus button is displayed for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyPlusButtonIsDisplayedForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
@@ -108,7 +109,9 @@ public class ProductsInCartComponentsTest {
         homePage.returnToHomePage();
     }
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName = "Verify plus button is enabled for al products in cart page.",
+            description = "This test add all 10 products in cart and verify if plus button is enabled for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyPlusButtonIsEnabledForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
@@ -136,7 +139,9 @@ public class ProductsInCartComponentsTest {
         homePage.returnToHomePage();
     }
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName = "Verify price for one product is displayed for al products in cart page.",
+            description = "This test add all 10 products in cart and verify if price for one product is displayed for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyPriceForOneProductIsDisplayedForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
@@ -164,7 +169,9 @@ public class ProductsInCartComponentsTest {
         homePage.returnToHomePage();
     }
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName = "Verify price for several products is displayed for al products in cart page.",
+            description = "This test add all 10 products in cart and verify if price for several products is displayed for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyPriceForSeveralProductsIsDisplayedForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
@@ -187,12 +194,14 @@ public class ProductsInCartComponentsTest {
         Product product0 = new Product("0");
         product0.addToBasket();
         homePage.clickOnTheCartIcon();
-        assertTrue(productsInCart.validatePriceForSeveralProductsIsDisplayedForAllProducts(), "Expected price for more than one product to be displayed for all products.");
+        assertTrue(productsInCart.validatePriceForSeveralProductsIsDisplayedForAllProducts(),"Expected price for more than one product to be displayed for all products.");
         homePage.resetPage();
         homePage.returnToHomePage();
     }
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName = "Verify product link is displayed for al products in cart page.",
+            description = "This test add all 10 products in cart and verify if product link is displayed for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyProductLinkIsDisplayedForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
@@ -220,7 +229,9 @@ public class ProductsInCartComponentsTest {
         homePage.returnToHomePage();
     }
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName = "Verify product link is enabled for al products in cart page.",
+            description = "This test add all 10 products in cart and verify if product link is enabled for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyProductLinkIsEnabledForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
@@ -248,7 +259,9 @@ public class ProductsInCartComponentsTest {
         homePage.returnToHomePage();
     }
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName = "Verify trash icon is displayed for al products in cart page.",
+            description = "This test add all 10 products in cart and verify if trash icon is displayed for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyTrashIconIsDisplayedForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
@@ -276,7 +289,9 @@ public class ProductsInCartComponentsTest {
         homePage.returnToHomePage();
     }
 
-    @Test(dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
+    @Test(testName = "Verify trash icon is enabled for al products in cart page.",
+            description = "This test add all 10 products in cart and verify if trash icon is enabled for all products.",
+            dataProvider = "productsInCartProvider", dataProviderClass = ProductsInCartDataProvider.class)
     public void verifyTrashIconIsEnabledForAllProducts(ProductsInCart productsInCart) {
         Product product1 = new Product("1");
         product1.addToBasket();
@@ -303,9 +318,4 @@ public class ProductsInCartComponentsTest {
         homePage.resetPage();
         homePage.returnToHomePage();
     }
-
-
-
-
-
 }

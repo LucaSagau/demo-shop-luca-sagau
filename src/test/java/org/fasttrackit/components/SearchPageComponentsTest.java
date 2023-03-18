@@ -42,6 +42,6 @@ public class SearchPageComponentsTest {
         assertTrue(homePage.validateSearchButtonIsEnabled(), "Expected search button to be enabled.");
 
     }
-    }
+}
 
 

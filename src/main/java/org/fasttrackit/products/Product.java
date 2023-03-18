@@ -3,8 +3,7 @@ package org.fasttrackit.products;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 public class Product {
 
@@ -54,7 +53,9 @@ public class Product {
      * Adds
      */
     public void addToBasket() {
+        this.addToBasket.scrollTo();
         this.addToBasket.click();
+        sleep(150);
     }
 
     public void addToFavorite() {

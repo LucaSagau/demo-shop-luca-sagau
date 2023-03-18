@@ -5,14 +5,21 @@ import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.CheckoutPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-@Feature("Checkout Components Tests")
+
 public class CheckoutPageComponentsTest {
 
     HomePage homePage = new HomePage();
+
+    @AfterMethod
+    public void setup() {
+        homePage.resetPage();
+        homePage.returnToHomePage();
+    }
 
     @Test(testName = "Verify checkout title is displayed.",
             description = "This test verify if checkout title is displayed.")
@@ -24,8 +31,6 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateCheckoutTitleIsDisplayed(), "Expected checkout title to be displayed.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify first name field is displayed.",
@@ -38,8 +43,6 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateFirstNameFieldIsDisplayed(), "Expected first name field to be displayed.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify first name field is enabled.",
@@ -52,8 +55,6 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateFirstNameFieldIsEnabled(), "Expected first name field to be enabled.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify last name field is displayed.",
@@ -66,8 +67,6 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateLastNameFieldIsDisplayed(), "Expected last name field to be displayed.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify last name field is enabled.",
@@ -80,9 +79,8 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateLastNameFieldIsEnabled(), "Expected last name field to be enabled.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
+
     @Test(testName = "Verify address field is displayed.",
             description = "This test verify if address field is displayed.")
     public void checkoutAddressFieldIsDisplayed() {
@@ -93,9 +91,8 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateAddressFieldIsDisplayed(), "Expected address field to be displayed.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
+
     @Test(testName = "Verify address field is enabled.",
             description = "This test verify if address field is enabled.")
     public void checkoutAddressFieldIsEnabled() {
@@ -106,8 +103,6 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateAddressFieldIsEnabled(), "Expected address field to be enabled.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify cancel button checkout is displayed.",
@@ -120,8 +115,6 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateCancelButtonCheckoutIsDisplayed(), "Expected cancel button checkout to be displayed.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify cancel button checkout is enabled.",
@@ -134,8 +127,6 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateCancelButtonCheckoutIsEnabled(), "Expected cancel button checkout to be enabled.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify continue checkout button is displayed.",
@@ -148,8 +139,6 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateContinueCheckoutButtonIsDisplayed(), "Expected continue checkout button to be displayed.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify continue checkout button is enabled.",
@@ -162,8 +151,6 @@ public class CheckoutPageComponentsTest {
         cartPage.clickOnCheckoutButton();
         CheckoutPage checkoutPage = new CheckoutPage();
         assertTrue(checkoutPage.validateContinueCheckoutButtonIsEnabled(), "Expected continue checkout button to be enabled.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify error message is displayed.",
@@ -177,7 +164,5 @@ public class CheckoutPageComponentsTest {
         CheckoutPage checkoutPage = new CheckoutPage();
         checkoutPage.clickOnContinueCheckoutButton();
         assertTrue(checkoutPage.validateErrorMessageIsDisplayed(), "Expected error message to be displayed.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 }

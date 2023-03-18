@@ -21,6 +21,7 @@ public class UserTurtleTest {
         homePage.resetPage();
         homePage.returnToHomePage();
     }
+
     @Test(testName = "Verify user turtle can add products in cart.",
             description = "This test verify if user turtle can add products in cart.")
     public void userTurtleCanAddProductsInCart() {
@@ -38,7 +39,7 @@ public class UserTurtleTest {
         product2.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
-        assertEquals("3", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 3.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "3", "Expected number of products in cart to be 3.");
 
     }
 
@@ -59,7 +60,7 @@ public class UserTurtleTest {
         product2.addToFavorite();
         homePage.clickOnTheWishlistIcon();
         WishlistPage wishlistPage = new WishlistPage();
-        assertEquals("3", wishlistPage.verifyNumberOfProductsInWishlist(), "Expected number of products in cart to be 3.");
+        assertEquals(wishlistPage.verifyNumberOfProductsInWishlist(), "3", "Expected number of products in cart to be 3.");
 
     }
 
@@ -86,7 +87,7 @@ public class UserTurtleTest {
         ProductsInCart productsInCart5 = new ProductsInCart("5");
         productsInCart5.increaseNumberOfProducts();
         CartPage cartPage = new CartPage();
-        assertEquals("6", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 6.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "6", "Expected number of products in cart to be 6.");
     }
 
     @Test(testName = "Verify user turtle can decrease number of products in cart.",
@@ -112,8 +113,9 @@ public class UserTurtleTest {
         productsInCart7 = new ProductsInCart("7");
         productsInCart7.decreaseNumberOfProducts();
         CartPage cartPage = new CartPage();
-        assertEquals("2", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 2.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "2", "Expected number of products in cart to be 2.");
     }
+
     @Test(testName = "Verify user turtle can delete products from cart.",
             description = "This test verify if user turtle can delete products from cart.")
     public void userTurtleCanDeleteProductsFromCart() {
@@ -133,7 +135,7 @@ public class UserTurtleTest {
         ProductsInCart productsInCart8 = new ProductsInCart("8");
         productsInCart8.deleteProductFromCart();
         CartPage cartPage = new CartPage();
-        assertEquals("", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 0.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "", "Expected number of products in cart to be 0.");
     }
 
     @Test(testName = "Verify user turtle can 't delete products from cart.",
@@ -155,9 +157,8 @@ public class UserTurtleTest {
         ProductsInCart productsInCart9 = new ProductsInCart("9");
         productsInCart9.deleteProductFromCart();
         CartPage cartPage = new CartPage();
-        assertEquals("", cartPage.verifyNumberOfProductsInBasket(), "Expected number of products in cart to be 0.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "", "Expected number of products in cart to be 0.");
     }
-
 
 
 }

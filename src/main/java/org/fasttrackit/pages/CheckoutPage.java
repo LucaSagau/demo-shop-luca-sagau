@@ -73,8 +73,9 @@ public class CheckoutPage {
      */
 
     public void clickOnContinueCheckoutButton() {
+        this.continueCheckoutButton.scrollTo();
         this.continueCheckoutButton.click();
-        sleep(200);
+        sleep(300);
     }
 
     public void clickOnFirstNameField() {

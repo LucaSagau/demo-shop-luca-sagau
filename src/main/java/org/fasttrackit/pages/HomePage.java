@@ -98,7 +98,6 @@ public class HomePage extends Page {
      */
 
     public boolean validateModalIsDisplayed() {
-        System.out.println("Verify that the modal is displayed on page. ");
         return this.modal.exists() && this.modal.isDisplayed();
     }
 
@@ -144,7 +143,6 @@ public class HomePage extends Page {
      * Clicks
      */
     public void clickOnTheSignInButton() {
-        System.out.println("Clicked on the open Modal Button.");
         this.header.clickOnTheSignInButton();
         sleep(150);
     }
@@ -155,7 +153,7 @@ public class HomePage extends Page {
 
     public void clickOnTheLogoButton() {
         this.header.clickOnTheLogoButton();
-        sleep(350);
+        sleep(400);
     }
 
     public void clickOnTheCartIcon() {

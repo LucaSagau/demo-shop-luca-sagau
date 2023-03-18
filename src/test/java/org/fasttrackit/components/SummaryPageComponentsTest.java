@@ -6,13 +6,20 @@ import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.SummaryPage;
 import org.fasttrackit.products.Product;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.testng.Assert.*;
 
 public class SummaryPageComponentsTest {
     HomePage homePage = new HomePage();
 
+    @AfterTest
+    public void setup() {
+
+    }
 
     @Test(testName = "Verify summary title is displayed.",
             description = "This test verify if summary title is displayed.")
@@ -39,8 +46,8 @@ public class SummaryPageComponentsTest {
     @Test(testName = "Verify cancel button summary is displayed.",
             description = "This test verify if cancel button summary is displayed.")
     public void verifyCancelButtonSummaryIsDisplayed() {
-        Product product2 = new Product("2");
-        product2.addToBasket();
+        Product product1 = new Product("1");
+        product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         cartPage.clickOnCheckoutButton();
@@ -61,8 +68,8 @@ public class SummaryPageComponentsTest {
     @Test(testName = "Verify cancel button summary is enabled.",
             description = "This test verify if cancel button summary is enabled.")
     public void verifyCancelButtonSummaryIsEnabled() {
-        Product product3 = new Product("3");
-        product3.addToBasket();
+        Product product1 = new Product("1");
+        product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         cartPage.clickOnCheckoutButton();
@@ -83,8 +90,8 @@ public class SummaryPageComponentsTest {
     @Test(testName = "Verify complete your order button is displayed.",
             description = "This test verify if complete your order button is displayed.")
     public void verifyCompleteYourOrderButtonIsDisplayed() {
-        Product product4 = new Product("4");
-        product4.addToBasket();
+        Product product1 = new Product("1");
+        product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         cartPage.clickOnCheckoutButton();
@@ -105,8 +112,8 @@ public class SummaryPageComponentsTest {
     @Test(testName = "Verify complete your order button is enabled.",
             description = "This test verify if complete your order button is enabled.")
     public void verifyCompleteYourOrderButtonIsEnabled() {
-        Product product5 = new Product("5");
-        product5.addToBasket();
+        Product product1 = new Product("1");
+        product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         cartPage.clickOnCheckoutButton();
@@ -127,8 +134,8 @@ public class SummaryPageComponentsTest {
     @Test(testName = "Verify thank you message is displayed.",
             description = "This test verify if thank you message is displayed.")
     public void verifyThankYouMessageIsDisplayed() {
-        Product product6 = new Product("6");
-        product6.addToBasket();
+        Product product1 = new Product("1");
+        product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         cartPage.clickOnCheckoutButton();
@@ -150,8 +157,8 @@ public class SummaryPageComponentsTest {
     @Test(testName = "Verify order complete title is displayed.",
             description = "This test verify if order complete title is displayed.")
     public void verifyOrderCompleteTitleIsDisplayed() {
-        Product product7 = new Product("7");
-        product7.addToBasket();
+        Product product1 = new Product("1");
+        product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         cartPage.clickOnCheckoutButton();
@@ -167,14 +174,14 @@ public class SummaryPageComponentsTest {
         summaryPage.clickOnCompleteYourOrderButton();
         assertTrue(summaryPage.validateOrderCompleteTitleIsDisplayed(), "Expected order complete title to be displayed.");
         homePage.resetPage();
-        homePage.clickOnTheLogoButton();//continueShoppingSummaryButton
+        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify continue shopping summary button is displayed.",
             description = "This test verify if continue shopping summary button is displayed.")
     public void verifyContinueShoppingSummaryButtonIsDisplayed() {
-        Product product8 = new Product("8");
-        product8.addToBasket();
+        Product product1 = new Product("1");
+        product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         cartPage.clickOnCheckoutButton();
@@ -196,8 +203,8 @@ public class SummaryPageComponentsTest {
     @Test(testName = "Verify continue shopping summary button is enabled.",
             description = "This test verify if continue shopping summary button is enabled.")
     public void verifyContinueShoppingSummaryButtonIsEnabled() {
-        Product product9 = new Product("9");
-        product9.addToBasket();
+        Product product1 = new Product("1");
+        product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         cartPage.clickOnCheckoutButton();
@@ -216,11 +223,11 @@ public class SummaryPageComponentsTest {
         homePage.clickOnTheLogoButton();
     }
 
-    @Test(testName = "Verify clicking on continue shopping summary button is returning to home page.",
+    @Test(testName = "Verify if clicking on continue shopping summary button is returning to home page.",
             description = "This test verify if clicking on continue shopping summary button is returning to home page.")
     public void verifyClickOnContinueShoppingSummaryButtonIsReturnToHomePage() {
-        Product product0 = new Product("0");
-        product0.addToBasket();
+        Product product1 = new Product("1");
+        product1.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         cartPage.clickOnCheckoutButton();

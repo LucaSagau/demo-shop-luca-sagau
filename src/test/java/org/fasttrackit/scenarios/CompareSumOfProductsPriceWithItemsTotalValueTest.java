@@ -5,9 +5,10 @@ import org.fasttrackit.body.Modal;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.*;
 
 public class CompareSumOfProductsPriceWithItemsTotalValueTest {
 
@@ -21,7 +22,8 @@ public class CompareSumOfProductsPriceWithItemsTotalValueTest {
         homePage.returnToHomePage();
     }
 
-    @Test
+    @Test(testName = "Compare sum of products prices in cart with items total value.",
+    description = "This test compare if the sum of products prices in cart is the same with items total value.")
     public void compareSumOfProductsPriceWithItemsTotalValue() {
         Account account = new Account("dino", "choochoo");
         homePage.clickOnTheSignInButton();
@@ -36,7 +38,7 @@ public class CompareSumOfProductsPriceWithItemsTotalValueTest {
         product3.addToBasket();
         product3.addToBasket();
         homePage.clickOnTheCartIcon();
-        Assert.assertEquals(cartPage.getItemsTotal(), "$51.96", "Expected value of items total to be 51.96 $.");
+        assertEquals(cartPage.getItemsTotal(), "$51.96", "Expected value of items total to be 51.96 $.");
 
     }
 

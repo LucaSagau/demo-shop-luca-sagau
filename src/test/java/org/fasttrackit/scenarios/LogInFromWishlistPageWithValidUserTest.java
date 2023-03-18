@@ -14,7 +14,8 @@ public class LogInFromWishlistPageWithValidUserTest {
 
     HomePage homePage = new HomePage();
 
-    @Test
+    @Test(testName = "Verify user dino can login from wishlist page.",
+            description = "This test verify if user dino can login from wishlist page.")
     public void verifyIfDinoUserCanLogInFromWishlistPage() {
         Product product0 = new Product("0");
         product0.addToFavorite();
@@ -31,7 +32,8 @@ public class LogInFromWishlistPageWithValidUserTest {
         homePage.logUserOut();
     }
 
-    @Test
+    @Test(testName = "Verify user beetle can login from wishlist page.",
+            description = "This test verify if user beetle can login from wishlist page.")
     public void verifyIfBeetleUserCanLogInFromWishlistPage() {
         Product product3 = new Product("3");
         product3.addToFavorite();
@@ -48,7 +50,8 @@ public class LogInFromWishlistPageWithValidUserTest {
         homePage.logUserOut();
     }
 
-    @Test
+    @Test(testName = "Verify user turtle can login from wishlist page.",
+            description = "This test verify if user turtle can login from wishlist page.")
     public void verifyIfTurtleUserCanLogInFromWishlistPage() {
         Product product4 = new Product("4");
         product4.addToFavorite();

@@ -15,7 +15,8 @@ public class LogInFromCartPageWithValidUserTest {
 
     HomePage homePage = new HomePage();
 
-    @Test
+    @Test(testName = "Verify user dino can login from cart page.",
+            description = "This test verify if user dino can login from cart page.")
     public void verifyIfDinoUserCanLogInFromCartPage() {
         Product product5 = new Product("5");
         product5.addToBasket();
@@ -33,7 +34,8 @@ public class LogInFromCartPageWithValidUserTest {
         homePage.resetPage();
     }
 
-    @Test
+    @Test(testName = "Verify user beetle can login from cart page.",
+            description = "This test verify if user beetle can login from cart page.")
     public void verifyIfBeetleUserCanLogInFromCartPage() {
         Product product6 = new Product("6");
         product6.addToBasket();
@@ -51,7 +53,8 @@ public class LogInFromCartPageWithValidUserTest {
         homePage.resetPage();
     }
 
-    @Test
+    @Test(testName = "Verify user turtle can login from cart page.",
+            description = "This test verify if user turtle can login from cart page.")
     public void verifyIfTurtleUserCanLogInFromCartPage() {
         Product product4 = new Product("4");
         product4.addToBasket();

@@ -30,7 +30,8 @@ public class LogInTest {
         homePage.logUserOut();
     }
 
-    @Test(testName = "User cant login with locked user.")
+    @Test(testName = "User can't login with locked user.",
+            description = "This test verify if user can't login with locked user.")
     public void userCantLoginWithLockedUser() {
         Account account = new Account("locked", "choochoo");
         homePage.clickOnTheSignInButton();
@@ -43,8 +44,8 @@ public class LogInTest {
         modal.clickOnTheCloseButton();
     }
 
-    @Test(testName = "User cant login with no username and no password.")
-
+    @Test(testName = "User can't login with no username and no password.",
+            description = "This test verify if user can't login with no username and no password.")
     public void userCantLoginWithNoUsernameAndNoPassword() {
         Account account = new Account("", "");
         homePage.clickOnTheSignInButton();
@@ -58,8 +59,8 @@ public class LogInTest {
         modal.clickOnTheCloseButton();
     }
 
-    @Test(testName = "User cant login with valid username and no password.")
-
+    @Test(testName = "User can't login with valid username and no password.",
+            description = "This test verify if user can't login with valid username and no password.")
     public void userCantLoginWithValidUsernameAndNoPassword() {
         Account account = new Account("dino", "");
         homePage.clickOnTheSignInButton();
@@ -72,8 +73,8 @@ public class LogInTest {
         modal.clickOnTheCloseButton();
     }
 
-    @Test(testName = "User cant login with no username and valid password.")
-
+    @Test(testName = "User can't login with no username and valid password.",
+            description = "This test verify if user can't login with no username and valid password.")
     public void userCantLoginWithNoUsernameAndValidPassword() {
         Account account = new Account("", "choochoo");
         homePage.clickOnTheSignInButton();
@@ -86,8 +87,8 @@ public class LogInTest {
         modal.clickOnTheCloseButton();
     }
 
-    @Test(testName = "User cant login with wrong username and wrong password.")
-
+    @Test(testName = "User can't login with wrong username and wrong password.",
+            description = "This test verify if user can't login with wrong username and wrong password.")
     public void userCantLoginWithWrongUsernameAndWrongPassword() {
         Account account = new Account("dno", "choochoos");
         homePage.clickOnTheSignInButton();
@@ -100,8 +101,8 @@ public class LogInTest {
         modal.clickOnTheCloseButton();
     }
 
-    @Test(testName = "User cant login with valid username and wrong password.")
-
+    @Test(testName = "User can't login with valid username and wrong password.",
+            description = "This test verify if user can't login with valid username and wrong password.")
     public void userCantLoginWithValidUsernameAndWrongPassword() {
         Account account = new Account("dino", "choochoos");
         homePage.clickOnTheSignInButton();
@@ -114,8 +115,8 @@ public class LogInTest {
         modal.clickOnTheCloseButton();
     }
 
-    @Test(testName = "User cant login with wrong username and valid password.")
-
+    @Test(testName = "User can't login with wrong username and valid password.",
+            description = "This test verify if user can't login with wrong username and valid password.")
     public void userCantLoginWithWrongUsernameAndValidPassword() {
         Account account = new Account("dno", "choochoo");
         homePage.clickOnTheSignInButton();
@@ -128,8 +129,8 @@ public class LogInTest {
         modal.clickOnTheCloseButton();
     }
 
-    @Test(testName = "User cant login with wrong username and no password.")
-
+    @Test(testName = "User can't login with wrong username and no password.",
+            description = "This test verify if user can't login with wrong username and no password.")
     public void userCantLoginWithWrongUsernameAndNoPassword() {
         Account account = new Account("dno", "");
         homePage.clickOnTheSignInButton();
@@ -142,8 +143,8 @@ public class LogInTest {
         modal.clickOnTheCloseButton();
     }
 
-    @Test(testName = "User cant login with no username and wrong password.")
-
+    @Test(testName = "User can't login with no username and wrong password.",
+            description = "This test verify if user can't login with no username and wrong password.")
     public void userCantLoginWithNoUsernameAndWrongPassword() {
         Account account = new Account("", "choochoa");
         homePage.clickOnTheSignInButton();

@@ -12,9 +12,9 @@ public class CartPageComponentsTest {
 
     HomePage homePage = new HomePage();
 
-
     @AfterMethod
     public void setup() {
+        homePage.resetPage();
         homePage.returnToHomePage();
     }
 
@@ -24,7 +24,6 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateCartIsDisplayed(), "Expected cart page to be displayed.");
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify the adding message is displayed on page.",
@@ -33,8 +32,6 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateCartAddingMsgIsDisplayed(), "Expected cart adding message to be displayed.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify the continue shopping button is displayed on cart page.",
@@ -45,8 +42,6 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateContinueShoppingButtonIsDisplayed(), "Expected continue shopping button to be displayed on cart page.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify the continue shopping button is enabled on cart page.",
@@ -57,8 +52,6 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateContinueShoppingButtonIsEnabled(), "Expected continue shopping button to be enabled on cart page.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify the checkout button is displayed on cart page.",
@@ -69,8 +62,6 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateCheckoutButtonIsDisplayed(), "Expected checkout button to be displayed on cart page.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify the checkout button is enabled on cart page.",
@@ -81,8 +72,6 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateCheckoutButtonIsEnabled(), "Expected checkout button to be enabled on cart page.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify the items total is displayed on cart page.",
@@ -93,8 +82,6 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateItemsTotalIsDisplayed(), "Expected items total to be displayed on cart page.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify the tax is displayed on cart page.",
@@ -105,8 +92,6 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateTaxIsDisplayed(), "Expected tax to be displayed on cart page.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
     }
 
     @Test(testName = "Verify the total is displayed on cart page.",
@@ -117,8 +102,5 @@ public class CartPageComponentsTest {
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
         assertTrue(cartPage.validateTotalIsDisplayed(), "Expected total to be displayed on cart page.");
-        homePage.resetPage();
-        homePage.clickOnTheLogoButton();
-
     }
 }

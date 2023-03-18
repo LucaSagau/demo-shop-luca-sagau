@@ -30,12 +30,10 @@ public class CartPage {
      * Validators-displayed
      */
     public boolean validateCartIsDisplayed() {
-        System.out.println("Verify cart is displayed. ");
         return this.pageCartSubtitle.exists() && this.pageCartSubtitle.isDisplayed();
     }
 
     public boolean validateCartAddingMsgIsDisplayed() {
-        System.out.println("Verify cart adding message is displayed. ");
         return this.addingSomeProductsInYourCart.exists() && this.addingSomeProductsInYourCart.isDisplayed();
     }
 
@@ -53,6 +51,10 @@ public class CartPage {
 
     public boolean validateTaxIsDisplayed() {
         return  this.tax.exists() && this.tax.isDisplayed();
+    }
+
+    public boolean validateTotalIsDisplayed() {
+        return  this.total.exists() && this.total.isDisplayed();
     }
     /**
      * Validators-enabled
@@ -72,8 +74,8 @@ public class CartPage {
         this.checkoutButton.click();
     }
 
+public void clickOnContinueShoppingButton() {
+        this.continueShoppingButton.click();
+}
 
-    public boolean validateTotalIsDisplayed() {
-        return  this.total.exists() && this.total.isDisplayed();
-    }
 }
