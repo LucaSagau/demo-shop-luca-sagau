@@ -1,5 +1,6 @@
 package org.fasttrackit.scenarios;
 
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
 import org.fasttrackit.products.ProductsInCart;
@@ -7,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class DecreaseNumberOfProductsInCartTest {
+public class DecreaseNumberOfProductsInCartTest extends TestConfiguration {
     HomePage homePage = new HomePage();
 
     @Test(testName = "Verify if clicking on minus button for product zero is decreasing number of products in cart.",

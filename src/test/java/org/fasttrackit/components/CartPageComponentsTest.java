@@ -1,5 +1,6 @@
 package org.fasttrackit.components;
 
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
@@ -8,7 +9,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class CartPageComponentsTest {
+public class CartPageComponentsTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
 

@@ -2,6 +2,7 @@ package org.fasttrackit.scenarios;
 
 import org.fasttrackit.Account;
 import org.fasttrackit.body.Modal;
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-public class CompareSumOfProductsPriceWithItemsTotalValueTest {
+public class CompareSumOfProductsPriceWithItemsTotalValueTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
     CartPage cartPage = new CartPage();

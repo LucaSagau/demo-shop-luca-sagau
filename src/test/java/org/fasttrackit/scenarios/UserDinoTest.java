@@ -2,6 +2,7 @@ package org.fasttrackit.scenarios;
 
 import org.fasttrackit.Account;
 import org.fasttrackit.body.Modal;
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.WishlistPage;
@@ -14,7 +15,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 
-public class UserDinoTest {
+public class UserDinoTest extends TestConfiguration {
     HomePage homePage = new HomePage();
 
     @AfterMethod

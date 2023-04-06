@@ -2,6 +2,7 @@ package org.fasttrackit.scenarios;
 
 import org.fasttrackit.Account;
 import org.fasttrackit.body.Modal;
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class UserBeetleTest {
+public class UserBeetleTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
 

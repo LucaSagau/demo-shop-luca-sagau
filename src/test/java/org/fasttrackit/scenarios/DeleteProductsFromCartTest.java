@@ -1,5 +1,6 @@
 package org.fasttrackit.scenarios;
 
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
 import org.fasttrackit.products.ProductsInCart;
@@ -7,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class DeleteProductsFromCartTest {
+public class DeleteProductsFromCartTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
 

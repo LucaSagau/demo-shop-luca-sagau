@@ -1,5 +1,6 @@
 package org.fasttrackit.scenarios;
 
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.products.Product;
 import org.fasttrackit.products.ProductsInCart;
@@ -9,7 +10,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 import static org.testng.Assert.assertEquals;
 
 
-public class IncreaseNumberOfProductsInCartTest {
+public class IncreaseNumberOfProductsInCartTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
 

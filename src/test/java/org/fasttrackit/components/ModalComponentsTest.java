@@ -1,6 +1,7 @@
 package org.fasttrackit.components;
 
 import org.fasttrackit.body.Modal;
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.HomePage;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -9,7 +10,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 
-public class ModalComponentsTest {
+public class ModalComponentsTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
     Modal modal = new Modal();

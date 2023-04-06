@@ -1,6 +1,7 @@
 package org.fasttrackit.components;
 
 import io.qameta.allure.Feature;
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.CheckoutPage;
 import org.fasttrackit.pages.HomePage;
@@ -11,7 +12,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 
-public class CheckoutPageComponentsTest {
+public class CheckoutPageComponentsTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
 

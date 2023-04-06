@@ -1,13 +1,14 @@
 package org.fasttrackit.components;
 
 import com.codeborne.selenide.SelenideElement;
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.HomePage;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class StaticDemoShopStateTest {
+public class StaticDemoShopStateTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
 

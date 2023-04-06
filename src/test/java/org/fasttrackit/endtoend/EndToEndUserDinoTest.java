@@ -3,6 +3,7 @@ package org.fasttrackit.endtoend;
 import org.fasttrackit.Account;
 import org.fasttrackit.body.Header;
 import org.fasttrackit.body.Modal;
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.CheckoutPage;
 import org.fasttrackit.pages.HomePage;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class EndToEndUserDinoTest {
+public class EndToEndUserDinoTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
 

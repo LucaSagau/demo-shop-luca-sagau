@@ -3,6 +3,7 @@ package org.fasttrackit.scenarios;
 import org.fasttrackit.Account;
 import org.fasttrackit.body.Header;
 import org.fasttrackit.body.Modal;
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.dataprovider.LoginDataProvider;
 import org.fasttrackit.pages.HomePage;
 import org.testng.annotations.Test;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class LogInTest {
+public class LogInTest extends TestConfiguration {
 
     HomePage homePage = new HomePage();
 

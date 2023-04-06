@@ -1,6 +1,7 @@
 package org.fasttrackit.components;
 
 import io.qameta.allure.Feature;
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.WishlistPage;
 import org.testng.annotations.AfterMethod;
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.sleep;
 import static org.testng.Assert.assertTrue;
 
-public class WishlistPageComponentsTest {
+public class WishlistPageComponentsTest extends TestConfiguration {
 
     HomePage homePage = new HomePage ();
 

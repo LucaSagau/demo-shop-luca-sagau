@@ -1,5 +1,6 @@
 package org.fasttrackit.components;
 
+import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.CheckoutPage;
 import org.fasttrackit.pages.HomePage;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Selenide.sleep;
 import static org.testng.Assert.*;
 
-public class SummaryPageComponentsTest {
+public class SummaryPageComponentsTest extends TestConfiguration {
     HomePage homePage = new HomePage();
 
     @AfterTest
