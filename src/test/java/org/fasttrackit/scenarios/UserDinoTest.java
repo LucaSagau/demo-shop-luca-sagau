@@ -23,6 +23,7 @@ public class UserDinoTest extends TestConfiguration {
         homePage.resetPage();
         homePage.returnToHomePage();
     }
+
     @Test(testName = "Verify user dino can add products in cart.",
             description = "This test verify if user dino can add products in cart.")
     public void userDinoCanAddProductsInCart() {
@@ -40,7 +41,7 @@ public class UserDinoTest extends TestConfiguration {
         product2.addToBasket();
         homePage.clickOnTheCartIcon();
         CartPage cartPage = new CartPage();
-        assertEquals( cartPage.verifyNumberOfProductsInBasket(),"3", "Expected number of products in cart to be 3.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "3", "Expected number of products in cart to be 3.");
 
     }
 
@@ -61,7 +62,7 @@ public class UserDinoTest extends TestConfiguration {
         product2.addToFavorite();
         homePage.clickOnTheWishlistIcon();
         WishlistPage wishlistPage = new WishlistPage();
-        assertEquals(wishlistPage.verifyNumberOfProductsInWishlist(),"3",  "Expected number of products in cart to be 3.");
+        assertEquals(wishlistPage.verifyNumberOfProductsInWishlist(), "3", "Expected number of products in cart to be 3.");
 
     }
 
@@ -88,7 +89,7 @@ public class UserDinoTest extends TestConfiguration {
         ProductsInCart productsInCart5 = new ProductsInCart("5");
         productsInCart5.increaseNumberOfProducts();
         CartPage cartPage = new CartPage();
-        assertEquals( cartPage.verifyNumberOfProductsInBasket(),"6", "Expected number of products in cart to be 6.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "6", "Expected number of products in cart to be 6.");
     }
 
     @Test(testName = "Verify user dino can decrease number of products in cart.",
@@ -114,7 +115,7 @@ public class UserDinoTest extends TestConfiguration {
         productsInCart7 = new ProductsInCart("7");
         productsInCart7.decreaseNumberOfProducts();
         CartPage cartPage = new CartPage();
-        assertEquals( cartPage.verifyNumberOfProductsInBasket(),"2", "Expected number of products in cart to be 2.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "2", "Expected number of products in cart to be 2.");
     }
 
     @Test(testName = "Verify user dino can delete products from cart.",
@@ -136,8 +137,9 @@ public class UserDinoTest extends TestConfiguration {
         ProductsInCart productsInCart8 = new ProductsInCart("8");
         productsInCart8.deleteProductFromCart();
         CartPage cartPage = new CartPage();
-        assertEquals(cartPage.verifyNumberOfProductsInBasket(),"",  "Expected number of products in cart to be 0.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "", "Expected number of products in cart to be 0.");
     }
+
     @Test(testName = "Verify user dino can't delete products from cart.",
             description = "This test verify if user dino can't delete products from cart.")
     public void userDinoCantDeleteProductsFromCart() {
@@ -157,7 +159,7 @@ public class UserDinoTest extends TestConfiguration {
         ProductsInCart productsInCart9 = new ProductsInCart("9");
         productsInCart9.deleteProductFromCart();
         CartPage cartPage = new CartPage();
-        assertEquals(cartPage.verifyNumberOfProductsInBasket(),"", "Expected number of products in cart to be 0.");
+        assertEquals(cartPage.verifyNumberOfProductsInBasket(), "", "Expected number of products in cart to be 0.");
     }
 
 }

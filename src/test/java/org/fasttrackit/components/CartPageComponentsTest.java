@@ -1,5 +1,7 @@
 package org.fasttrackit.components;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.fasttrackit.config.TestConfiguration;
 import org.fasttrackit.pages.CartPage;
 import org.fasttrackit.pages.HomePage;
@@ -18,6 +20,7 @@ public class CartPageComponentsTest extends TestConfiguration {
         homePage.resetPage();
         homePage.returnToHomePage();
     }
+
 
     @Test(testName = "Verify the cart page can be open from home page.",
             description = "Verify the cart page can be open from home page.")
