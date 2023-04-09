@@ -1,5 +1,7 @@
 package org.fasttrackit.scenarios;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.fasttrackit.Account;
 import org.fasttrackit.body.Modal;
 import org.fasttrackit.config.TestConfiguration;
@@ -141,6 +143,7 @@ public class UserTurtleTest extends TestConfiguration {
 
     @Test(testName = "Verify user turtle can 't delete products from cart.",
             description = "This test verify if user turtle can 't delete products from cart.")
+    @Severity(SeverityLevel.CRITICAL)
     public void userTurtleCantDeleteProductsFromCart() {
         Account account = new Account("turtle", "choochoo");
         homePage.clickOnTheSignInButton();

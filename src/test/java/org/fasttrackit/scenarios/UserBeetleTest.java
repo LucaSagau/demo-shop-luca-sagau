@@ -1,5 +1,7 @@
 package org.fasttrackit.scenarios;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.fasttrackit.Account;
 import org.fasttrackit.body.Modal;
 import org.fasttrackit.config.TestConfiguration;
@@ -39,6 +41,7 @@ public class UserBeetleTest extends TestConfiguration {
 
     @Test(testName = "Verify user beetle can add product one in cart.",
             description = "This test verify if user beetle can add product one in cart.")
+    @Severity(SeverityLevel.CRITICAL)
     public void userBeetleCanAddProductOneInCart() {
         Account account = new Account("beetle", "choochoo");
         homePage.clickOnTheSignInButton();
@@ -71,6 +74,7 @@ public class UserBeetleTest extends TestConfiguration {
 
     @Test(testName = "Verify user beetle can add product three in cart.",
             description = "This test verify if user beetle can add product three in cart.")
+    @Severity(SeverityLevel.CRITICAL)
     public void userBeetleCanAddProductThreeInCart() {
         Account account = new Account("beetle", "choochoo");
         homePage.clickOnTheSignInButton();
@@ -103,6 +107,7 @@ public class UserBeetleTest extends TestConfiguration {
 
     @Test(testName = "Verify user beetle can add product Five in cart.",
             description = "This test verify if user beetle can add product Five in cart.")
+    @Severity(SeverityLevel.CRITICAL)
     public void userBeetleCanAddProductFiveInCart() {
         Account account = new Account("beetle", "choochoo");
         homePage.clickOnTheSignInButton();
@@ -135,6 +140,7 @@ public class UserBeetleTest extends TestConfiguration {
 
     @Test(testName = "Verify user beetle can add product seven in cart.",
             description = "This test verify if user beetle can add product seven in cart.")
+    @Severity(SeverityLevel.CRITICAL)
     public void userBeetleCanAddProductSevenInCart() {
         Account account = new Account("beetle", "choochoo");
         homePage.clickOnTheSignInButton();
@@ -167,6 +173,7 @@ public class UserBeetleTest extends TestConfiguration {
 
     @Test(testName = "Verify user beetle can add product nine in cart.",
             description = "This test verify if user beetle can add product nine in cart.")
+    @Severity(SeverityLevel.CRITICAL)
     public void userBeetleCanAddProductNineInCart() {
         Account account = new Account("beetle", "choochoo");
         homePage.clickOnTheSignInButton();

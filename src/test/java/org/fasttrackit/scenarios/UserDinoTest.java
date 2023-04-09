@@ -1,5 +1,7 @@
 package org.fasttrackit.scenarios;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.fasttrackit.Account;
 import org.fasttrackit.body.Modal;
 import org.fasttrackit.config.TestConfiguration;
@@ -142,6 +144,7 @@ public class UserDinoTest extends TestConfiguration {
 
     @Test(testName = "Verify user dino can't delete products from cart.",
             description = "This test verify if user dino can't delete products from cart.")
+    @Severity(SeverityLevel.CRITICAL)
     public void userDinoCantDeleteProductsFromCart() {
         Account account = new Account("dino", "choochoo");
         homePage.clickOnTheSignInButton();

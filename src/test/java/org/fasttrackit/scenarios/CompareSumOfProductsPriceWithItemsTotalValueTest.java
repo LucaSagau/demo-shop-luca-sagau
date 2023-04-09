@@ -1,5 +1,7 @@
 package org.fasttrackit.scenarios;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.fasttrackit.Account;
 import org.fasttrackit.body.Modal;
 import org.fasttrackit.config.TestConfiguration;
@@ -25,6 +27,7 @@ public class CompareSumOfProductsPriceWithItemsTotalValueTest extends TestConfig
 
     @Test(testName = "Compare sum of products prices in cart with items total value.",
     description = "This test compare if the sum of products prices in cart is the same with items total value.")
+    @Severity(SeverityLevel.CRITICAL)
     public void compareSumOfProductsPriceWithItemsTotalValue() {
         Account account = new Account("dino", "choochoo");
         homePage.clickOnTheSignInButton();
